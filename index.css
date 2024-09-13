@@ -1,0 +1,585 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather", serif; /* Apply serif font */
+  line-height: 1.6;
+  background-color: #fcf8f3; /* Soft off-white background */
+}
+
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #16423c;
+  padding: 10px;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 1.875rem; /* 30px */
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #f4a261;
+}
+
+/* CV button specific styles */
+.navbar-brand a .btn {
+  color: #c5705d;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-brand a .btn:hover {
+  color: #16423c;
+  border-bottom: 0.0625rem solid #16423c; /* 1px */
+}
+
+nav ul li a.btn {
+  color: #c5705d;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex; /* Ensure it is an inline element */
+  align-items: center; /* Align items vertically */
+}
+
+/* Make sure CV button aligns with the rest */
+nav ul li a.btn:hover {
+  color: #fff;
+  border-bottom: 0.0625rem solid #16423c; /* 1px */
+}
+
+/* Hamburger menu */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+#navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive for tablets and mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #333;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav ul.show {
+    left: 0;
+  }
+
+  nav ul li {
+    margin: 20px 0;
+  }
+
+  section {
+    padding: 80px 10px;
+  }
+
+  section h1 {
+    font-size: 2rem;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Home Section Styles */
+#home {
+  background-color: #fcf8f3;
+  padding-top: 6.25rem; /* 100px space between navbar and content */
+}
+
+.home-content {
+  padding-top: 0.2rem;
+  display: flex;
+  align-items: center; /* Align text with the center of the image */
+  justify-content: center; /* Centers the content horizontally */
+  padding: 3.125rem; /* 50px */
+  background-color: #fcf8f3; /* Matching the navbar background color */
+}
+
+.profile-photo-container {
+  display: inline-block;
+  margin-right: 1.25rem; /* 20px */
+  width: 100%; /* Ensure it takes up the available width */
+  max-width: 27.375rem; /* 437px */
+}
+
+.profile-photo {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 32.875rem; /* 526px */
+  border-radius: 0.3125rem; /* 5px */
+}
+
+/* Text container styles */
+.text-container {
+  max-width: 37.5rem; /* 600px */
+  text-align: left;
+}
+
+.text-container h1 {
+  text-align: left;
+  font-size: 3.5rem;
+  color: #c5705d;
+  margin-bottom: 0.625rem; /* 10px */
+}
+
+.text-container .intro {
+  font-size: 1.2rem;
+  color: #6a9c89;
+  margin: 1.25rem 0; /* 20px */
+}
+
+.text-container .bio {
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+.btn {
+  text-align: left;
+  display: inline-block;
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+  margin: 0.3125rem; /* 5px */
+  color: #c5705d;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  color: #16423c;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 48rem) {
+  /* 768px */
+  .home-content {
+    flex-direction: column; /* Stack the image and text on small screens */
+  }
+
+  .profile-photo-container {
+    margin-bottom: 1.25rem; /* 20px */
+  }
+
+  .profile-photo {
+    max-width: 100%; /* Ensure it scales to fit its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Section Styles */
+section {
+  padding: 3.75rem 1.25rem; /* 60px 20px */
+}
+
+section h1 {
+  font-size: 1.25rem; /* 2rem */
+  color: #16423c;
+  text-align: center;
+}
+
+/**Skills**/
+
+#skills {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#skills h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #16423c;
+  margin-bottom: 1.5rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.skill-category {
+  background-color: #fff;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%; /* Ensure it takes up full width within the container */
+  margin-bottom: 1rem;
+}
+
+.skill-category h3 {
+  font-size: 1.25rem;
+  color: #c5705d;
+  margin-bottom: 0.75rem;
+}
+
+.skill-category p {
+  font-size: 1rem;
+  color: #16423c;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .skills-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .skill-category {
+    width: 45%;
+  }
+}
+
+@media (max-width: 767px) {
+  .skill-category {
+    width: 100%;
+  }
+}
+
+/**education-------------------------------------------------------------------------------------------------------------------*/
+#education h1 {
+  font-size: 2rem;
+  color: #16423c;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/*WORK EXPERIENCE-------------------------------------------------------------------------------------------------------------------*/
+
+/* Work Experience Section */
+#work-experience {
+  background-color: #fcf8f3;
+  padding: 3.75rem 1.25rem;
+  margin-top: 3rem;
+}
+
+#work-experience h1 {
+  font-size: 2rem;
+  color: #16423c;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.work-experience-container {
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.job {
+  margin-bottom: 2rem;
+}
+
+.job-content {
+  text-align: justify;
+  display: flex;
+  align-items: flex-start;
+}
+
+.job-photo-container {
+  margin-right: 1.5rem; /* Space between photo and job details */
+}
+
+.job-photo {
+  width: 7rem; /* Adjust the size as necessary */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 0.3125rem; /* Slight rounding of the image */
+}
+
+.job-details {
+  max-width: calc(100% - 8rem); /* Adjusts based on the photo size */
+}
+
+.job h2 {
+  font-size: 1.5rem;
+  color: #c5705d;
+  margin-bottom: 0.5rem;
+}
+
+.job h3 {
+  font-size: 1.25rem;
+  color: #6a9c89;
+  margin-bottom: 0.25rem;
+}
+
+.job .duration {
+  font-size: 1rem;
+  color: #698474;
+  margin-bottom: 1rem;
+}
+
+.responsibilities {
+  font-size: 1rem;
+  color: #000;
+  padding-left: 1.5rem;
+}
+
+.responsibilities li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .job-content {
+    flex-direction: column; /* Stack the image and text vertically on smaller screens */
+  }
+
+  .job-photo-container {
+    margin-bottom: 1.5rem; /* Add spacing between image and text on smaller screens */
+  }
+}
+
+/*Publication Style-----------------------------------------------------------------------------------------*/
+
+/* Publications Section Styles */
+#publications {
+  background-color: #fcf8f3; /* Same as the other sections */
+  padding: 3.75rem 1.25rem; /* 60px 20px */
+}
+
+.publication-container {
+  display: flex;
+  align-items: center;
+  max-width: 50rem; /* 800px */
+  margin: 0 auto;
+  background-color: #ffffff; /* Background color for the publication box */
+  padding: 1.875rem; /* 30px */
+  border-radius: 0.3125rem; /* 5px */
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.publication-image {
+  flex: 1;
+  margin-right: 1.25rem; /* 20px */
+}
+
+.publication-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.3125rem; /* 5px */
+}
+
+.publication-details {
+  flex: 2;
+}
+
+.publication-details h1 {
+  font-size: 1rem; /* 30px */
+  color: #16423c;
+  margin-bottom: 0.5rem; /* 8px */
+  text-align: justify;
+}
+
+.publication-details p {
+  font-size: 0.81rem; /* 18px */
+  color: #000;
+  margin-bottom: 0.75rem; /* 12px */
+  text-align: justify;
+}
+
+@media screen and (max-width: 48rem) {
+  /* 768px */
+  .publication-container {
+    flex-direction: column;
+  }
+
+  .publication-image {
+    margin-right: 0;
+    margin-bottom: 1.25rem; /* 20px */
+  }
+}
+
+/*footer*/
+/* Footer Styles */
+footer {
+  background-color: #16423c;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-icons {
+  margin-bottom: 15px;
+}
+
+.footer-icons a {
+  color: #fff;
+  font-size: 1.75rem;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #c5705d;
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/*Contact----------------------------------------------------------------------------------------------*/
+
+/* Contact section */
+#contact {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  color: #16423c;
+  margin-bottom: 1.5rem;
+}
+
+#contact p {
+  font-size: 1.125rem;
+  margin: 10px 0;
+}
+
+#contact a {
+  color: #0073b1;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* About Me Section Styles ---------------------------------------------------------------------------------*/
+#about {
+  background-color: #fcf8f3; /* Matching the rest of the site */
+  padding: 3.75rem 1.25rem; /* 60px 20px */
+}
+
+.about-content {
+  max-width: 50rem; /* 800px */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content h1 {
+  font-size: 2rem; /* 40px */
+  color: #16423c;
+  margin-bottom: 1rem; /* 16px */
+}
+
+.about-content p {
+  font-size: 1rem; /* 18px */
+  color: #000;
+  margin-bottom: 1.5rem; /* 24px */
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.about-content h2 {
+  font-size: 1.2rem; /* 24px */
+  color: #16423c;
+  margin-bottom: 1rem; /* 16px */
+}
+
+@media screen and (max-width: 48rem) {
+  /* 768px */
+  .about-content {
+    padding: 1.25rem; /* 20px */
+  }
+
+  .about-content h1 {
+    font-size: 2rem; /* 32px */
+  }
+
+  .about-content p {
+    font-size: 1rem; /* 16px */
+  }
+
+  .about-content h2 {
+    font-size: 1.25rem; /* 20px */
+  }
+}
