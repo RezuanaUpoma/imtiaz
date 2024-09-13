@@ -1,4 +1,4 @@
-/* General styles */
+/* General styles --------------------------------------------------------------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +22,8 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
+
+/*portfolio        -----------------------------------------------------------------------------------------------*/
 
 nav {
   position: fixed;
@@ -56,93 +58,7 @@ nav ul li a:hover {
   color: #f4a261;
 }
 
-/* CV button specific styles */
-.navbar-brand a .btn {
-  color: #c5705d;
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: transparent;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.navbar-brand a .btn:hover {
-  color: #16423c;
-  border-bottom: 0.0625rem solid #16423c; /* 1px */
-}
-
-nav ul li a.btn {
-  color: #c5705d;
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: transparent;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-flex; /* Ensure it is an inline element */
-  align-items: center; /* Align items vertically */
-}
-
-/* Make sure CV button aligns with the rest */
-nav ul li a.btn:hover {
-  color: #fff;
-  border-bottom: 0.0625rem solid #16423c; /* 1px */
-}
-
-/* Hamburger menu */
-.menu-icon {
-  display: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  padding-left: 20px;
-}
-
-#navbar {
-  transition: all 0.3s ease-in-out;
-}
-
-/* Responsive for tablets and mobile */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    background-color: #333;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
-  }
-
-  nav ul.show {
-    left: 0;
-  }
-
-  nav ul li {
-    margin: 20px 0;
-  }
-
-  section {
-    padding: 80px 10px;
-  }
-
-  section h1 {
-    font-size: 2rem;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Portfolio Section Styling */
+/* Portfolio Section Styling --------------------------------------------------------------------------------------------------------------------*/
 #portfolio {
   padding: 60px 20px; /* Increased padding to make the section bigger */
   text-align: center;
@@ -195,8 +111,95 @@ html {
   }
 }
 
+/*navbar-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/* CV button specific styles */
+.navbar-brand a .btn {
+  color: #c5705d;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-/* Home Section Styles */
+.navbar-brand a .btn:hover {
+  color: #16423c;
+  border-bottom: 0.0625rem solid #16423c; /* 1px */
+}
+
+nav ul li a.btn {
+  color: #c5705d;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex; /* Ensure it is an inline element */
+  align-items: center; /* Align items vertically */
+}
+
+/* Make sure CV button aligns with the rest */
+nav ul li a.btn:hover {
+  color: #fff;
+  border-bottom: 0.0625rem solid #16423c; /* 1px */
+}
+
+/* Hamburger menu */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+#navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive for tablets and mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #16423c;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    text-align: ;
+  }
+
+  nav ul.show {
+    left: 0;
+  }
+
+  nav ul li {
+    margin: 20px 0;
+  }
+
+  section {
+    padding: 80px 10px;
+  }
+
+  section h1 {
+    font-size: 2rem;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Home Section Styles ================================================================================================================*/
 #home {
   background-color: #fcf8f3;
   padding-top: 6.25rem; /* 100px space between navbar and content */
@@ -296,7 +299,16 @@ section h1 {
   text-align: center;
 }
 
-/**Skills**/
+/**research interest--------------------------------------------------------------------------------------------------------*/
+
+#research {
+  /* padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;*/
+}
+
+/**Skills----------------------------------------------------------------------------------------------------------------**/
 
 #skills {
   padding: 2rem 0;
@@ -399,6 +411,7 @@ section h1 {
   text-align: justify;
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap; /* Wrap content to prevent overflow */
 }
 
 .job-photo-container {
@@ -445,12 +458,59 @@ section h1 {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  #work-experience {
+    padding: 2.5rem 1rem; /* Adjust padding for smaller screens */
+  }
+
   .job-content {
-    flex-direction: column; /* Stack the image and text vertically on smaller screens */
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center; /* Center-align content */
   }
 
   .job-photo-container {
-    margin-bottom: 1.5rem; /* Add spacing between image and text on smaller screens */
+    margin: 0 0 1.5rem 0; /* Add spacing between image and text on smaller screens */
+  }
+
+  .job-photo {
+    width: 100%; /* Make the image responsive, full width */
+    max-width: 150px; /* Set a maximum width for the image on smaller screens */
+  }
+
+  .job-details {
+    max-width: 100%; /* Ensure job details take up full width on mobile */
+    text-align: justify; /* Center-align text on smaller screens */
+  }
+
+  .job h2,
+  .job h3 {
+    text-align: center; /* Center-align headings */
+  }
+
+  .responsibilities {
+    padding-left: 0; /* Remove padding for responsibilities list on mobile */
+    text-align: center; /* Center the list */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .job-content {
+    padding: 0 1rem; /* Add more padding on smaller devices */
+  }
+
+  #work-experience h1 {
+    font-size: 1.5rem; /* Smaller heading on very small screens */
+  }
+
+  .job h2 {
+    font-size: 1.25rem; /* Adjust heading size */
+  }
+
+  .job h3 {
+    font-size: 1.125rem; /* Adjust subheading size */
+  }
+
+  .responsibilities {
+    font-size: 0.875rem; /* Smaller font for responsibilities list */
   }
 }
 
