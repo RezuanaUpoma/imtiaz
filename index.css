@@ -142,6 +142,60 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Portfolio Section Styling */
+#portfolio {
+  padding: 60px 20px; /* Increased padding to make the section bigger */
+  text-align: center;
+  background-color: #f4f4f4; /* Light background for contrast */
+}
+
+.portfolio-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.portfolio-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px; /* Increased gap for better spacing */
+}
+
+.portfolio-icon {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.portfolio-icon i {
+  font-size: 2.5rem; /* Adjust this size for all icons */
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.portfolio-icon.dribbble i {
+  font-size: 2.5rem; /* Larger size only for Dribbble */
+  color: #555;
+}
+
+.portfolio-icon:hover i {
+  color: #777; /* Hover effect for all icons */
+}
+
+.portfolio-icon p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .portfolio-icons {
+    flex-direction: column;
+  }
+}
+
+
 /* Home Section Styles */
 #home {
   background-color: #fcf8f3;
